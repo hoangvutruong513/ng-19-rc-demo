@@ -4,7 +4,6 @@ import { RootService } from '../root.service';
 
 @Component({
   selector: 'app-main-layout',
-  standalone: true,
   imports: [ChildOneComponent],
   styles: `
     :host {

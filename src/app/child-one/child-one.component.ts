@@ -1,5 +1,4 @@
 import {
-  afterRenderEffect,
   ApplicationRef,
   Component,
   computed,
@@ -14,7 +13,6 @@ import { RootService } from '../root.service';
 
 @Component({
   selector: 'app-child-one',
-  standalone: true,
   styles: `
     :host {
       border: 2px solid green;
