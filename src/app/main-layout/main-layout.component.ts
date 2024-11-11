@@ -44,7 +44,6 @@ export class MainLayoutComponent {
   rootService = inject(RootService);
   test = signal(10);
   sideEffectTest = signal(this.test());
-
   showContent = signal(true);
 
   a = effect(() => {

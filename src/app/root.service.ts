@@ -6,7 +6,9 @@ export class RootService {
   b = signal(5);
   rootRecursive = signal(1);
 
-  c = effect(() => console.log('Root effect logging a', this.a(), this.b()));
+  c = effect(() =>
+    console.log('Root effect logging a and b', this.a(), this.b()),
+  );
 
   d = effect(() =>
     console.log('Root effect logging a x b', this.a() * this.b()),
