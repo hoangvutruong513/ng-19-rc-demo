@@ -1,4 +1,5 @@
 import {
+  afterRenderEffect,
   ApplicationRef,
   Component,
   computed,
@@ -63,6 +64,12 @@ export class ChildOneComponent {
   double = computed(() => this.testInput() * 2);
   triple = signal(this.testInput() * 3);
   recursiveSignal = signal(1);
+
+  afterRenderEffect = afterRenderEffect(() =>
+    console.log('Logging test input, after view has been change detected', {
+      testInput: this.testInput(),
+    }),
+  );
 
   a = effect(() =>
     console.log(

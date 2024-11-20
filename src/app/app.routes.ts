@@ -8,4 +8,11 @@ export const routes: Routes = [
         (p) => p.MainLayoutComponent,
       ),
   },
+  {
+    path: 'linked-signal',
+    loadComponent: () =>
+      import('./link-signal-demo/link-signal-demo.component').then(
+        (p) => p.LinkSignalDemoComponent,
+      ),
+  },
 ];
